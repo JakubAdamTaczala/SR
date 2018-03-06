@@ -1,0 +1,140 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pl_PL
+
+% $Id:$
+
+%Author: Wojciech Domski
+%Szablon do ząłożeń projektowych, raportu i dokumentacji z steorwników robotów
+%Wersja v.1.0.0
+%
+
+%% Konfiguracja:
+\newcommand{\kurs}{Sterowniki robot\'{o}w}
+\newcommand{\formakursu}{Projekt}
+
+%odkomentuj właściwy typ projektu
+\newcommand{\doctype}{Za\l{}o\.{z}enia projektowe}
+%\newcommand{\doctype}{Raport}
+%\newcommand{\doctype}{Dokumentacja}
+
+%wpisz nazwę projektu
+\newcommand{\projectname}{Robot zdalnie sterowany z funkcjami autonomicznymi}
+
+%wpisz akronim projektu
+\newcommand{\acronim}{Ratatuj }
+
+%zmaiast X wpisz numer grupy projektowej
+\newcommand{\nrgrupy}{III}
+%wpisz Imię i nazwisko oraz numer albumu
+\newcommand{\osobaA}{Rafa\l{} \textsc{Ga\l{}\k{a}zka}, 226476}
+%w przypadku projektu jednoosobowego usuń zawartość nowej komendy
+\newcommand{\osobaB}{Jakub \textsc{Tacza\l{}a}, 226495}
+
+%wpisz termin w formie, jak poniżej dzień, parzystość, godzina
+\newcommand{\termin}{wtTP11}
+
+%wpisz imię i nazwisko prowadzącego
+\newcommand{\prowadzacy}{mgr in\.{z}. Wojciech \textsc{Domski}}
+
+\documentclass[10pt, a4paper]{article}
+% W nawiasie klamrowym podana jest klasa dokumentu. Standardowe klasy artykułu
+% to: article, amsart, scrartcl, artikel1, artikel2, artikel3.
+% W nawiasie prostokątnym deklarowane są opcje dokumentu. Zamiast 10pt
+% można podać 11pt lub 12pt. Dokument w dwóch kolumnach uzyskuje się po
+% wpisaniu opcji twocolumn, 
+
+\include{preambula}
+	
+\begin{document}
+
+\def\tablename{Tabela}	%zmienienie nazwy tabel z Tablica na Tabela
+
+\begin{titlepage}
+	\begin{center}
+		\textsc{\LARGE \formakursu}\\[1cm]		
+		\textsc{\Large \kurs}\\[0.5cm]		
+		\rule{\textwidth}{0.08cm}\\[0.4cm]
+		{\huge \bfseries \doctype}\\[1cm]
+		{\huge \bfseries \projectname}\\[0.5cm]
+		{\huge \bfseries \acronim}\\[0.4cm]
+		\rule{\textwidth}{0.08cm}\\[1cm]
+		
+		\begin{flushright} \large
+		\emph{Skład grupy (\nrgrupy):}\\
+		\osobaA\\
+		\osobaB\\[0.4cm]
+		
+		\emph{Termin: }\termin\\[0.4cm]
+
+		\emph{Prowadzący:} \\
+		\prowadzacy \\
+		
+		\end{flushright}
+		
+		\vfill
+		
+		{\large \today}
+	\end{center}	
+\end{titlepage}
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Opis projektu}
+\input{opis_projektu}
+
+%newpage
+%section{Harmonogram pracy}
+
+%newpage
+%section{Podział pracy}
+
+%newpage
+%section{Podsumowanie}
+
+\newpage
+\addcontentsline{toc}{section}{Bibilografia}
+\bibliography{bibliografia}
+\bibliographystyle{plain}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
