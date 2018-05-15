@@ -51,7 +51,7 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-uint16_t pomiar[2] = {3, 3};
+uint16_t pomiar[5] = {3, 3, 3, 3, 3};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -112,7 +112,7 @@ int main(void)
 
 	while (1) {
 		//HAL_UART_Transmit(&huart2, &dana, 1, 100);
-		printf("dana: %d %d\r\n",pomiar[0], pomiar[1]);
+		printf("dana: %d %d %d %d %d\r\n",pomiar[0], pomiar[1], pomiar[2], pomiar[3] , pomiar[4]);
 		HAL_Delay(100);
 		HAL_GPIO_TogglePin(dioda_GPIO_Port, dioda_Pin);
   /* USER CODE END WHILE */
